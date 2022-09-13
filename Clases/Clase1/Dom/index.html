@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <button id="boton">hacer click</button>
+
+    <script>
+        document.getElementById("parrafo").innerText = "hola desde javascript";
+        const spanElement = document.createElement("span");
+        spanElement.innerText = "hola soy un span";
+        const pElement = document.getElementById("parrafo");
+        pElement.appendChild(spanElement)
+        const boton = document.getElementById("boton");
+        window.addEventListener("load", ()=>console.log("estamos listos"))
+    </script>
+</body>
+</html>
