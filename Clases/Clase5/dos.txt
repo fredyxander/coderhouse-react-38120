@@ -1,0 +1,62 @@
+import React, { useState, useEffect } from 'react';
+import './style.css';
+
+const ComponenteHijo = () => {
+  console.log('componente hijo renderizado');
+  return <p>componente hijo</p>;
+};
+
+export default function App() {
+  // const state = useState("valor inicial");//valor inicial de la variable de estado
+  // const stateValue = state[0];//nombre de la variable de estado
+  // const setStateValue = state[1]; //funcion que vamos a utilizar para cambiar la variable de estado.
+  const curso = 'curso react';
+  const [stateValue, setStateValue] = useState('valor inicial');
+  const [contador, setContador] = useState(0);
+  const [reloj, setReloj] = useState('');
+
+  const modificar = () => {
+    setStateValue('nuevo valor');
+  };
+
+  const incrementarContador = () => {
+    setContador(contador + 1);
+  };
+
+  useEffect(() => {
+    console.log('useEffect ejecuntadose');
+    console.log('llamado a la api');
+    // setInterval(() => {
+    //   setReloj(new Date().toString());
+    // }, 1000);
+    return ()=>{
+      //cancelar llamados a apis
+      //limpieza de varibles.
+      //
+    }
+  }, []);
+
+  useEffect(() => {
+    console.log('la variable contador cambio');
+  }, [contador]);
+
+  useEffect(()=>{
+    
+  })
+
+  console.log('primera ejecucion');
+
+  return (
+    <div>
+      <h1>Hello StackBlitz! {curso}</h1>
+      <p>Start editing to see some magic happen :)</p>
+      <p>variable de estado {stateValue}</p>
+      <button onClick={modificar}>modificar estado</button>
+      <hr />
+      <p>conteo {contador}</p>
+      <button onClick={incrementarContador}>incrementar</button>
+      <ComponenteHijo />
+      <p>hora {reloj}</p>
+    </div>
+  );
+}

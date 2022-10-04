@@ -1,0 +1,43 @@
+import React from 'react';
+import './style.css';
+
+const ComponenteHijo = (props) => {
+  console.log(props);
+  return (
+    <div>
+      <p>soy un componente hijo {props.texto}</p>
+      {props.children}
+    </div>
+  );
+};
+
+export default function App() {
+  const obj = {
+    name: 'pepe',
+    age: 25,
+  };
+  return (
+    <div>
+      <h1>Hello StackBlitz!</h1>
+      <p>Start editing to see some magic happen :)</p>
+      <ComponenteHijo
+        texto="curso react"
+        numeros={[1, 2, 3]}
+        numero={10}
+        persona={obj}
+      >
+        <h3>soy un titulo</h3>
+      </ComponenteHijo>
+
+      <ComponenteHijo
+        texto="curso html"
+        numeros={[1, 2, 3]}
+        numero={10}
+        persona={obj}
+      >
+        <h3>soy un titulo</h3>
+        <p>introduccion a html</p>
+      </ComponenteHijo>
+    </div>
+  );
+}
