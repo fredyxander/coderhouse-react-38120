@@ -17,7 +17,6 @@ export const ContactoPage = ()=>{
 
     useEffect(()=>{
         const verificarResolucion = ()=>{
-            console.log(window.innerWidth);
             if(window.innerWidth<320){
                 setIsMobile(true);
             } else{

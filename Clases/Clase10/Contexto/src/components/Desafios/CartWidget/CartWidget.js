@@ -4,7 +4,6 @@ import { CartContext } from '../../../context/CartContext';
 
 export const CartWidget = ()=>{
     const {productosCarrito} = useContext(CartContext);
-    console.log("value", productosCarrito)
     return(
         <div>
             <img src={Carrito} alt="mario" style={{width:20}}/>

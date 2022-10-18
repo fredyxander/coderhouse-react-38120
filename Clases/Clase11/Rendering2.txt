@@ -1,0 +1,24 @@
+import React from "react";
+import "./style.css";
+
+export default function App() {
+  const loading = true;
+  //operador ternario codition ? true : false
+  // condition ? valor1 : valor2
+  //operador binario codition && codition2 && condition3 && elemento
+
+  return (
+    <div>
+      <h1>Hello StackBlitz!</h1>
+      <p>Start editing to see some magic happen :)</p>
+      {
+        loading === true ? <p>cargando...</p> : <div>datos cargados</div>
+      }
+      <div>
+        {
+          loading === true && <p>elementos cargando...</p>
+        }
+      </div>
+    </div>
+  );
+}

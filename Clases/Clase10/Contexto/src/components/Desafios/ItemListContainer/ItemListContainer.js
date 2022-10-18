@@ -8,8 +8,7 @@ import { CartContext } from "../../../context/CartContext";
 
 export const ItemListContainer = ()=>{
     const {productosCarrito} = useContext(CartContext);
-    console.log("value", productosCarrito)
-    console.log(useParams()); // {categoryName:""}
+    // console.log(useParams()); // {categoryName:""}
     // const categoryName = useParams().categoryName;
     const {categoryId} = useParams();
     // console.log(categoryName);
@@ -34,7 +33,6 @@ export const ItemListContainer = ()=>{
         })
     },[categoryId])
 
-    console.log("productos", productos);
     return(
         <div className="item-list-container">
             <p>item list container</p>

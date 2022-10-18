@@ -18,9 +18,7 @@ export const ItemDetailContainer = ()=>{
     useEffect(()=>{
         const getProducto = async()=>{
             const productos = await promesa;
-            console.log('productos', productos);
             const producto = productos.find(elemento=>elemento.id === parseInt(id));
-            console.log("producto", producto)
             setItemProduct(producto);
         }
         getProducto();

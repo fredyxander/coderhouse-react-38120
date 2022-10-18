@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React,{useState} from 'react';
 
 import { ItemListContainer } from './components/Desafios/ItemListContainer/ItemListContainer';
 import { Navbar } from './components/Desafios/NavBar/NavBar';
@@ -11,6 +11,7 @@ import { PaginaContexto } from './components/Temas/PaginaContexto/PaginaContexto
 import { CustomProvider } from './context/CartContext';
 
 function App() {
+
   return (
     <CustomProvider>
       <BrowserRouter>

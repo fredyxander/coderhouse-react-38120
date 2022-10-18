@@ -11,8 +11,6 @@ export const CustomProvider = ({children})=>{
         setProductosCarrito(nuevosProductos);
     }
 
-    console.log("productosCarrito", productosCarrito)
-
     return(
         <CartContext.Provider value={{nombre:"fredy", productosCarrito: productosCarrito, agregarProducto}}>
             {children}

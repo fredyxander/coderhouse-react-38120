@@ -1,10 +1,7 @@
-import {useState, useContext} from 'react';
-import { CartContext } from '../../../context/CartContext';
+import {useState} from 'react';
 import './ItemCount.css';
 
 export const ItemCount = ({stock, initial, onAdd, showText})=>{
-    const value = useContext(CartContext);
-    console.log("value",value)
     const [count, setCount] = useState(initial);
 
     const decrementar = ()=>{

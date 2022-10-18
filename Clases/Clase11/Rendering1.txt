@@ -1,0 +1,24 @@
+import React,{useState} from "react";
+import "./style.css";
+
+export default function App() {
+  const [loading, setLoading] = useState(false);
+
+  if(loading===true){
+    return <p>informacion cargando</p>
+  }
+
+  // const changeState = ()=>{
+  //   setTimeout(()=>{
+  //     setLoading(true)
+  //   },2000)
+  // }
+
+  return (
+    <div>
+      <h1>Hello StackBlitz!</h1>
+      <p>Start editing to see some magic happen :)</p>
+      {/* <button onClick={changeState}>cambiar variable</button> */}
+    </div>
+  );
+}
