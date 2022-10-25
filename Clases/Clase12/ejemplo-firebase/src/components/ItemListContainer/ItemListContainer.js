@@ -40,7 +40,7 @@ export const ItemListContainer = ()=>{
     // useEffect(()=>{
     //     const getData = async()=>{
     //         //crear referencia del punto de acceso de la informacion.
-    //         const queryRef = query(collection(db, "items"), where("category","==",categoryId),limit(1));
+    //         const queryRef = query(collection(db, "items"), where("category","==",categoryId));
     //         //obtener todos los documentos de la coleccion items/
     //         const response = await getDocs(queryRef);
     //         console.log(response);
